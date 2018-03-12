@@ -118,56 +118,54 @@ body{
 .second-page{
 	display: none;
 	&.active {
-	background-color: #FDD9DB;
-
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	p{
-		font-family: "gastromond",sans-serif;
-		color: #CE1041;
-		padding: 100px;
-		text-decoration: none;
-		font-size: 3.125rem;
-	}
-	.donuts{
+		background-color: #FDD9DB;
 		display: flex;
-		background-image: url(../img/fresh_donuts.jpg);
-		@extend %testing;
-		background-size: contain;
-		background-repeat: no-repeat;
-		width: 800px;
-		height: 640px;
+		flex-direction: column;
+		align-items: center;
 		justify-content: center;
-		padding-top: 45px;
+		p{
+			font-family: "gastromond",sans-serif;
+			color: #CE1041;
+			padding: 100px;
+			text-decoration: none;
+			font-size: 3.125rem;
+		}
+		.donuts{
+			display: flex;
+			background-image: url(../img/fresh_donuts.jpg);
+			@extend %testing;
+			background-size: contain;
+			background-repeat: no-repeat;
+			width: 800px;
+			height: 640px;
+			justify-content: center;
+			padding-top: 45px;
 
-	}
-	.drinks{
-		display: flex;
-		background-image: url(../img/coffee_drinks.png);
-		background-color: #fff;
-		@extend %testing;
-		background-size: contain;
-		background-repeat: no-repeat;
-		width: 800px;
-		height: 640px;
-		justify-content: center;
-		padding-top: 45px;
-		background-position: bottom center;
-
-	}
-	div p, a p{
-		color: #007550;
-		font-size: 2.5rem;
-	}
-	a{
-		text-decoration: none;
+		}
+		.drinks{
+			display: flex;
+			background-image: url(../img/coffee_drinks.png);
+			background-color: #fff;
+			@extend %testing;
+			background-size: contain;
+			background-repeat: no-repeat;
+			width: 800px;
+			height: 640px;
+			justify-content: center;
+			padding-top: 45px;
+			background-position: bottom center;
+		}
+		div p, a p{
+			color: #007550;
+			font-size: 2.5rem;
+		}
+		a{
+			text-decoration: none;
+		}
 	}
 }
-
  
-}
+
 .third-page{
 	display: none;
 	&.active{
@@ -257,7 +255,6 @@ body{
 					border-radius: 110px;
 					margin-left: 20px;
 				}
-
 			}
 		}
 	}
