@@ -17,6 +17,7 @@ TABLE OF CONTENTS:
 
 
 $textcolor: #007550;
+$green-buttons: #007550;
 
 /* 1. Main Layout ================================= */
 
@@ -218,8 +219,26 @@ body{
 .fourth-page{
 	display: none;
 	&.active{
-		display: block;
+		display: flex;
 		background-color: #CBE9E1;
+		flex-direction: column;
+		align-items: center;
+
+		button{
+			background-color: $green-buttons;
+			color: white;
+			padding: 20px 60px;
+			border: none;
+			width: 256px;
+			height: 47px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			font-size: 1.3rem;
+			margin-right: 100px;
+			flex-wrap: wrap;
+		}
 
 		.filters {
 			display: flex;
@@ -237,7 +256,7 @@ body{
 			background-size: cover;
 			background-repeat: no-repeat;
 			width: 1095px;
-			height: 1184px;
+			height: 1800px;
 			position: relative;
 			top: -520px;
 
@@ -246,7 +265,7 @@ body{
 				width: 700px;
 				top: 640px;
 				left: 190px;
-				border: 1px solid red;
+				// border: 1px solid red;
 				img{
 					display: inline-block;
 					// border: 60px solid brown;
@@ -255,6 +274,42 @@ body{
 					border-radius: 110px;
 					margin-left: 20px;
 				}
+			}
+		}
+		.under-box{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center; 
+			border-bottom: 4px #CE1041 solid;
+			width: 800px;
+			padding: 40px;
+			margin-top: -520px;
+
+			
+			.trash-can{
+				background-image: url(../img/trash-can.png);
+				width: 105px;
+				height: 100px;
+				background-size: contain;
+				background-repeat: no-repeat;
+			}
+		}
+		.donut-list-grid{
+			display: flex;
+			flex-wrap: wrap;
+			width: 800px;
+			top: 640px;
+			left: 190px;
+			overflow: scroll;
+			// border: 1px solid red;
+			img{
+				display: inline-block;
+				// border: 60px solid brown;
+				width: 180px;
+				height: 180px;
+				border-radius: 110px;
+				margin-left: 20px;
 			}
 		}
 	}

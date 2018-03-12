@@ -98,11 +98,6 @@ var donutsArray = [
 		description: "Lorem ipsum",
 		filters: ["filled", "chocolate"],
 	},{
-		filename: "fresh_donuts.png",
-		nice_name: "Fresh Donuts",
-		description: "Lorem ipsum",
-		filters: ["fresh_donuts"],
-	},{
 		filename: "glazed_cinnamon.png",
 		nice_name: "Glazed Cinnamon Donut",
 		description: "Lorem ipsum",
@@ -136,62 +131,62 @@ var donutsArray = [
 		filename: "glazed_sourcream.png",
 		nice_name: "Glazed Original",
 		description: "Lorem ipsum",
-		filters: ["glazed"]
+		filters: ["glazed"],
 	},{
 		filename: "iced_chocolate_sprinkles.png",
 		nice_name: "Glazed Original",
 		description: "Lorem ipsum",
-		filters: "glazed"
+		filters: ["glazed"],
 	},{
 		filename: "iced_strawberry.png",
 		nice_name: "Glazed Original",
 		description: "Lorem ipsum",
-		filters: "glazed"
+		filters: ["glazed"],
 	},{
 		filename: "iced_strawberry_sprinkles.png",
 		nice_name: "Glazed Original",
 		description: "Lorem ipsum",
-		filters: "glazed"
+		filters: ["glazed"],
 	},{
 		filename: "ny_cheesecake.png",
 		nice_name: "Glazed Original",
 		description: "Lorem ipsum",
-		filters: "glazed"
+		filters: ["glazed"],
 	},{
 		filename: "oreo.png",
 		nice_name: "Glazed Original",
 		description: "Lorem ipsum",
-		filters: "glazed"
+		filters: ["glazed"],
 	},{
 		filename: "original_donut.png",
 		nice_name: "Glazed Original",
 		description: "Lorem ipsum",
-		filters: "glazed"
+		filters: ["glazed"],
 	},{
 		filename: "powdered_filled_blueberry.png",
 		nice_name: "Glazed Original",
 		description: "Lorem ipsum",
-		filters: "glazed"
+		filters: ["glazed"],
 	},{
 		filename: "powdered_filled_strawberry.png",
 		nice_name: "Glazed Original",
 		description: "Lorem ipsum",
-		filters: "glazed"
+		filters: ["glazed"],
 	},{
 		filename: "powdered_lemon_kreme.png",
 		nice_name: "Glazed Original",
 		description: "Lorem ipsum",
-		filters: "glazed"
+		filters: ["glazed"],
 	},{
 		filename: "twist_cinnamon.png",
 		nice_name: "Glazed Original",
 		description: "Lorem ipsum",
-		filters: "glazed"
+		filters: ["glazed"],
 	},{
 		filename: "white_chocolate_drizzle.png",
 		nice_name: "Glazed Original",
 		description: "Lorem ipsum",
-		filters: "glazed"
+		filters: ["glazed"],
 	}
 ];
 
@@ -199,28 +194,39 @@ var donutsArray = [
 
 
 ///random button//////
+var $donutBoxGrid = document.querySelector(".donut-grid");
+var $donutListGrid = document.querySelector(".donut-list-grid");
 
 
-var getADonut = function(){
+
+var getDonutsInBox = function(){
 	for (var i = 0; i < 12; i++) {
-		donutsArray[i];
+		var donutsArray = donutsArray[i];
 		var randomDonut = donutsArray[Math.floor(Math.random()*donutsArray.length)];
 		console.log(randomDonut);
 		var img = document.createElement("img");
 		img.setAttribute("src", "dist/img/" + randomDonut.filename);
-		var $donutGrid = document.querySelector(".donut-grid");
 		$donutGrid.appendChild(img);
 	}
 
 }
 
+var getADonut = function(){
+	for (var i = 0; i < donutsArray.length; i++) {
+		var $donutsArray = donutsArray[i];
+		var img = document.createElement("img");
+		img.setAttribute("src", "dist/img/" + $donutsArray.filename);
+		$donutListGrid.appendChild(img);
+	}
 
-document.body.addEventListener("click", function(){
-	getADonut();
+}
+
+document.querySelector(".randomize-btn").addEventListener("click", function(){
+	$donutGrid.innerHTML = "";
+	getDonutsInBox();
 });
 
-
-
+getADonut();
 
 
 
