@@ -208,8 +208,7 @@ var getDonutsInBox = function(){
 		img.setAttribute("src", "dist/img/" + randomDonut.filename);
 		$donutGrid.appendChild(img);
 	}
-
-}
+};
 
 var getADonut = function(){
 	for (var i = 0; i < donutsArray.length; i++) {
@@ -218,8 +217,7 @@ var getADonut = function(){
 		img.setAttribute("src", "dist/img/" + $donutsArray.filename);
 		$donutListGrid.appendChild(img);
 	}
-
-}
+};
 
 document.querySelector(".randomize-btn").addEventListener("click", function(){
 	$donutGrid.innerHTML = "";
