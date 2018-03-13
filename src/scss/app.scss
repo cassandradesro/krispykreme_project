@@ -18,6 +18,7 @@ TABLE OF CONTENTS:
 
 $textcolor: #007550;
 $green-buttons: #007550;
+$redcolor: #CE1041;
 
 /* 1. Main Layout ================================= */
 
@@ -118,7 +119,7 @@ body{
 		width: 100%;
 	}
 	.bottom-donut{
-		
+
 	}
 }
 
@@ -222,6 +223,19 @@ body{
 	flex-wrap: wrap;
 }
 
+%greenbutton{
+	background-color: $green-buttons;
+	color: white;
+	padding: 20px 60px;
+	border: none;
+	width: 256px;
+	height: 47px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.3rem;
+}
 .fourth-page{
 	display: none;
 	&.active{
@@ -229,104 +243,87 @@ body{
 		background-color: #CBE9E1;
 		flex-direction: column;
 		align-items: center;
+	}
+	h1{
+		position: absolute;
+		z-index: 10000000;
+		font-family: "gastromond", sans-serif;
+		color: $redcolor;
+		font-size: 3.125rem;
+		top: 40px;
+	}
+	.donut-box{
+		background-image: url(../img/donut_box.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+		height: 1329.95px;
+		width: 1282.63px;
+		margin: -520px 0 0 100px;
 
-		button{
-			background-color: $green-buttons;
-			color: white;
-			padding: 20px 60px;
-			border: none;
-			width: 256px;
-			height: 47px;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			font-size: 1.3rem;
-			margin-right: 100px;
-			flex-wrap: wrap;
-		}
-
-		.filters {
-			display: flex;
-			.filter{
-				width: 100px;
-				height: 40px;
-				background-color: #007550;
-				color: #fff;
-				margin: 20px;
-				text-align: center;
-			}
-		}
-		.donut-box{
-			background-image: url(../img/donut_box.png);
-			background-size: cover;
-			background-repeat: no-repeat;
-			width: 1095px;
-			height: 1800px;
+		.donut-grid {
 			position: relative;
-			top: -520px;
-
-			.donut-grid {
-				position: relative;
-				width: 700px;
-				top: 640px;
-				left: 190px;
-				// border: 1px solid red;
-				img{
-					display: inline-block;
-					// border: 60px solid brown;
-					width: 145px;
-					height: 145px;
-					border-radius: 110px;
-					margin-left: 20px;
-				}
-			}
-		}
-		.under-box{
-			display: flex;
-			flex-direction: row;
-			justify-content: center;
-			align-items: center; 
-			border-bottom: 4px #CE1041 solid;
 			width: 800px;
-			padding: 40px;
-			margin-top: -520px;
-
-			
-			.trash-can{
-				background-image: url(../img/trash-can.png);
-				width: 105px;
-				height: 100px;
-				background-size: contain;
-				background-repeat: no-repeat;
-			}
-		}
-		.donut-list-grid{
-			display: flex;
-			flex-wrap: wrap;
-			width: 800px;
-			top: 640px;
-			left: 190px;
-			overflow: scroll;
-			// border: 1px solid red;
+			top: 600px;
+			left: 175px;
 			img{
 				display: inline-block;
-				// border: 60px solid brown;
-				width: 180px;
-				height: 180px;
+				width: 145px;
+				height: 145px;
 				border-radius: 110px;
 				margin-left: 20px;
 			}
 		}
 	}
+	.under-box{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center; 
+		width: 800px;
+		padding: 20px 0;
+
+		.trash-can{
+			background-image: url(../img/trash-can.png);
+			width: 75px;
+			height: 60px;
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+		button{
+			@extend %greenbutton;
+			margin-right: 100px;
+		}
+	}
+	.red-line{
+		border-top: 4px #CE1041 solid;
+		width: 800px;
+		margin: 40px 0;
+	}
+
+	.filters {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		width: 820px;
+		margin-bottom: 100px;
+		justify-content: center;
+		button{
+			@extend %greenbutton;
+			margin: 15px 5px;
+
+		}
+	}
+	.donut-list-grid{
+		display: flex;
+		flex-wrap: wrap;
+		width: 820px;
+		height: auto;
+		overflow: scroll;
+		img{
+			width: 180px;
+			height: 180px;
+			margin-left: 20px;
+		}
+	}
 }
 
-// .donut-box{
-// 	display: none;
-// 	&.active{
-// 	background: cover;
-// 	background-repeat: no-repeat;
-// 	width: 100%;
-// 	height: 100%;
-// 	}
-// }
