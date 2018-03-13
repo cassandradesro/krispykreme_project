@@ -201,12 +201,12 @@ var $donutListGrid = document.querySelector(".donut-list-grid");
 
 var getDonutsInBox = function(){
 	for (var i = 0; i < 12; i++) {
-		var donutsArray = donutsArray[i];
+		donutsArray[i];
 		var randomDonut = donutsArray[Math.floor(Math.random()*donutsArray.length)];
 		console.log(randomDonut);
 		var img = document.createElement("img");
 		img.setAttribute("src", "dist/img/" + randomDonut.filename);
-		$donutGrid.appendChild(img);
+		$donutBoxGrid.appendChild(img);
 	}
 };
 
@@ -220,7 +220,7 @@ var getADonut = function(){
 };
 
 document.querySelector(".randomize-btn").addEventListener("click", function(){
-	$donutGrid.innerHTML = "";
+	$donutBoxGrid.innerHTML = "";
 	getDonutsInBox();
 });
 
