@@ -256,15 +256,16 @@ body{
 		background-image: url(../img/donut_box.png);
 		background-size: cover;
 		background-repeat: no-repeat;
-		height: 1329.95px;
+		background-position: bottom center;
+		height: 1800px;
 		width: 1282.63px;
-		margin: -520px 0 0 100px;
+		margin: 0 0 0 100px;
 
 		.donut-grid {
 			position: relative;
-			width: 800px;
-			top: 600px;
-			left: 175px;
+			width: 820px;
+			top: 200px;
+			left: 250px;
 			img{
 				display: inline-block;
 				width: 145px;
@@ -316,14 +317,20 @@ body{
 	.donut-list-grid{
 		display: flex;
 		flex-wrap: wrap;
-		width: 820px;
-		height: auto;
+		width: 815px;
 		overflow: scroll;
 		img{
 			width: 180px;
 			height: 180px;
 			margin-left: 20px;
+			&.hover{
+				background-color: $redcolor;
+				width: 180px;
+				height: 180px;
+				border-radius: 110px;
+			}
 		}
+
 	}
 }
 
