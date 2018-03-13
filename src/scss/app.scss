@@ -110,28 +110,12 @@ body{
 		// background-size: cover;
 		// background-repeat: no-repeat;
 	}
-	.homepage-donuts{
-		bottom: 0;
-		left: 50%;
-		transform: translate(-50%, 0);
+	.bottom-donuts{
 		position: absolute;
-
-		&:nth-child(1) {
-			transform: rotate(4deg) translate(-55%, -50%); 
-
-		}
-		&:nth-child(2) {
-			transform: rotate(4deg) translate(-55%, -50%); 
-
-		}
-		&:nth-child(3) {
-			transform: rotate(4deg) translate(-55%, -50%); 
-
-		}
-		&:nth-child(4) {
-			transform: rotate(4deg) translate(-55%, -50%); 
-
-		}
+		bottom: 0;
+		right: 0;
+		transform: translate(-50%,0);
+		width: 100%;
 	}
 }
 

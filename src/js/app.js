@@ -64,10 +64,3 @@ $select_Dozen.addEventListener("click", function(){
 
 
 });
-
-
-TweenMax.to(".homepage-donuts", 4, {
-  bezier: getBezier(250, 250, 250, 250, true),
-  repeat: -1,
-  ease: Linear.easeNone
-});
