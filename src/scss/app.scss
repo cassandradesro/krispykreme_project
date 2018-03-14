@@ -123,6 +123,7 @@ body{
 
 .second-page{
 	display: none;
+	overflow: hidden;
 	.drippy-glaze-background {
 		position: absolute;
 		top: 0;
@@ -196,6 +197,36 @@ body{
 
 .third-page{
 	display: none;
+	overflow:hidden;
+	p{
+		font-family: "gastromond",sans-serif;
+		color: #CE1041;
+		padding: 100px;
+		text-decoration: none;
+		font-size: 3.125rem;
+		z-index: 100000000;
+	}
+	div p, a p{
+		color: #007550;
+		font-size: 2.5rem;
+		z-index: 10000000;
+	}
+	.drippy-glaze-background {
+		position: absolute;
+		top: 0;
+		left: 0;
+		pointer-events: none;
+		width: 100%;
+	}
+	.dots {
+		width: 180%;
+		transform: translate(-14%, 32%) rotate(183deg);
+		position: absolute;
+		top: 0;
+		left: 0;
+		pointer-events: none;
+		overflow: hidden;
+	}
 	&.active{
 		display: flex;
 		flex-direction: column;
@@ -206,12 +237,16 @@ body{
 			@extend %testing;
 					background-size: cover;
 					background-repeat: no-repeat;
+					z-index: 10000000;
+
 		}
 		.dozen{
 			background-image: url(../img/coffee_drinks.png);
 			@extend %testing;
 					background-size: cover;
 					background-repeat: no-repeat;
+					z-index: 10000000;
+
 		}
 		.half-dozen{
 			background-image: url(../img/dozen_glazed.png);
@@ -222,6 +257,8 @@ body{
 					width: 800px;
 					height: 640px;
 					background-color: white;
+					z-index: 10000000;
+
 		}
 	}
 }
