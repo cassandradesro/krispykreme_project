@@ -98,7 +98,7 @@ body{
 		left: 50%;
 		transform: translate(-50%, -50%);
 	}
-	div{
+	.text{
 		position: absolute;
 		top: 65%;
 		left: 50%;
@@ -114,9 +114,27 @@ body{
 	.bottom-donuts{
 		position: absolute;
 		bottom: 0;
-		right: 0;
-		transform: translate(-50%,0);
+		left: 0;
 		width: 100%;
+		height: 800px;
+
+		.bottom-donut{
+			position: absolute;
+		}
+		#choc_glazed{
+
+		}
+		#white-choc{
+
+		}
+		#strawberry-sprinks{
+
+		}
+		#glazed{
+			left: 0;
+			bottom: 0;
+
+		}
 	}
 
 }

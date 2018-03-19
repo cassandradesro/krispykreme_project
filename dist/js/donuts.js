@@ -221,4 +221,9 @@ document.querySelector(".randomize-btn").addEventListener("click", function () {
 });
 
 getADonut();
+
+///
+document.querySelector(".trash-can").addEventListener("click", function () {
+	$donutBoxGrid.innerHTML = "";
+});
 //# sourceMappingURL=donuts.js.map
